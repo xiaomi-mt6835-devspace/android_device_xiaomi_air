@@ -52,6 +52,10 @@ on post-fs-data
     chown system system /proc/smb/ScreenComm
     chmod 0660 /proc/smb/ScreenComm
 
+    # DT2W
+    chown system system /proc/tp_gesture
+    chmod 0660 /proc/tp_gesture
+
     chmod 0660 /dev/spm
     chown system system /dev/spm
 
