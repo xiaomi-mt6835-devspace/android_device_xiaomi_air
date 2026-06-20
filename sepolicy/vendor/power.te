@@ -1,0 +1,6 @@
+# Allow hal_power_default to access touch screen input devices
+allow hal_power_default input_device:dir search;
+allow hal_power_default input_device:chr_file { open write };
+
+# Allow hal_power_default to write to mali js_ctx_scheduling_mode
+allow hal_power_default sysfs:file { open write };

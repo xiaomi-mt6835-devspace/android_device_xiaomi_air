@@ -1,0 +1,15 @@
+# Silead fingerprint HAL policy
+type silead_fpd_device, dev_type;
+type silead_fpd_data_file, file_type, data_file_type;
+type silead_fp_service, service_manager_type;
+type vendor_silead_fp_prop, property_type;
+
+# Allow hal_fingerprint_default to access device and files
+allow hal_fingerprint_default silead_fpd_device:chr_file { read write ioctl open };
+allow hal_fingerprint_default vendor_silead_fp_prop:property_service set;
+allow hal_fingerprint_default vendor_silead_fp_prop:file { read getattr map open };
+allow hal_fingerprint_default silead_fpd_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+allow hal_fingerprint_default silead_fpd_data_file:dir { ioctl read write getattr lock open watch watch_reads add_name remove_name search };
+
+# Allow system_app to add the service
+allow system_app silead_fp_service:service_manager add;
