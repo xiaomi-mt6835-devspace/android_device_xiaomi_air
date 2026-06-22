@@ -55,11 +55,11 @@ int open_ts_input() {
 }  // anonymous namespace
 
 namespace aidl {
-namespace android {
+namespace google {
 namespace hardware {
 namespace power {
 namespace impl {
-namespace mediatek {
+namespace pixel {
 
 static constexpr int kInputEventWakeupModeOff = 4;
 static constexpr int kInputEventWakeupModeOn = 5;
