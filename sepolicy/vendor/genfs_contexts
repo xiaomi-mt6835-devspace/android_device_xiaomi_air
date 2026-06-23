@@ -1,4 +1,7 @@
-genfscon sysfs /devices/platform/13000000.mali/js_ctx_scheduling_mode u:object_r:sysfs_gpu:s0
-genfscon sysfs /devices/platform/13040000.mali/js_ctx_scheduling_mode u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/soc/13000000.mali/js_ctx_scheduling_mode u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/soc/13040000.mali/js_ctx_scheduling_mode u:object_r:sysfs_gpu:s0
 genfscon sysfs /devices/platform/soc/soc:regulator-vibrator/leds/vibrator      u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/mt6377-gauge/power_supply u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/11b21000.i2c/i2c-5/5-006a/power_supply u:object_r:sysfs_batteryinfo:s0
+
+genfscon proc /tp_gesture u:object_r:proc_tp_gesture:s0
